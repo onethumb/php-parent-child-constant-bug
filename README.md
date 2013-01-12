@@ -1,6 +1,8 @@
 PHP Bug: Parent class incorrectly using child constant in class property
 =============================
 
+See PHP bug #63976: https://bugs.php.net/bug.php?id=63976
+
 Since PHP doesn't support Child class properties referencing static values like static::CONST, the meaning of self::CONST is ambiguous.  One of two things should happen:
 
 1. It should use the value defined in the actual class in question (like self:: is used throughout the rest of PHP).
